@@ -1,4 +1,4 @@
-import { View, TexInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
 
 function GoalInput(props) {
     return (

@@ -14,10 +14,7 @@ import RoadObstructionScreen from './screens/RoadObstrutionScreen';
 const Navigation = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen options={{ headerShown: false }} name="welcome" component={WelcomeScreen} />
-      <Stack.Screen options={{ headerShown: false }} name="register" component={RegisterScreen} />
-      <Stack.Screen options={{ headerShown: false }} name="login" component={LoginScreen} />
-      <Stack.Screen options={{ headerShown: false }} name="signin" component={SigninScreen} /> */}
+  
       <Stack.Screen options={{ headerShown: false }} name="dashboard" component={DashboardScreen} />
       <Stack.Screen options={{ headerShown: false }} name="road" component={RoadObstructionScreen} />
   

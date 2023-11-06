@@ -4,7 +4,7 @@ import React from "react";
 const CompletedScreen = () => {
   return (
     <View>
-      <Text>CameraScreen</Text>
+      <Text>CompletedScreen</Text>
     </View>
   );
 };

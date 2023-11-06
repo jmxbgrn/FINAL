@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const inprogressScreen = () => {
+const InprogressScreen = () => {
   return (
     <View>
-      <Text>ReportsScreen</Text>
+      <Text>InProgressScreen</Text>
     </View>
   );
 };
 
-export default inprogressScreen ;
+export default InprogressScreen ;
 
 const styles = StyleSheet.create({});

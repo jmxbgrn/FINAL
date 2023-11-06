@@ -7,22 +7,10 @@ const WelcomeScreen = () => {
     const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            <View style={styles.imageContainer}> <Image style={styles.image} source={welcome} /></View>
-            <View style={styles.formContainer}>
-
-                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("login")}>
-                    <Text style={styles.buttonText}>LOGIN</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("register")}>
-                    <Text style={styles.buttonText}>REGISTER</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("dashboard")}>
-                    <Text style={styles.buttonText}>dashboard sample</Text>
-                </TouchableOpacity>
-
-
-            </View>
+             
+        <TouchableOpacity onPress={() => navigation.navigate("login")} >
+            <Text>button</Text>
+            </TouchableOpacity>
         </View>
 
     );
@@ -38,10 +26,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#EADCC1',
 
     },
-    imageContainer:{
-    flex:2,
-    alignItems:'center',
-    justifyContent:'center',
+    imageContainer: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     image: {
         height: 400,
@@ -49,8 +37,8 @@ const styles = StyleSheet.create({
     },
     formContainer: {
         flex: 2,
-        width:'100%',
-        alignItems:'center',
+        width: '100%',
+        alignItems: 'center',
     },
     buttonContainer: {
         backgroundColor: 'white',
@@ -64,7 +52,7 @@ const styles = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         fontWeight: 'bold',
-        
+
 
     },
 
