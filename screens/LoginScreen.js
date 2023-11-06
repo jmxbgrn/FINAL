@@ -20,14 +20,14 @@ const LoginScreen = () => {
         <Text style={styles.subheading} >Email</Text>
         <TextInput style={styles.input}
           placeholder="Email"
-          placeholderTextColor="rgba(0, 0, 0, 0.5)" 
+          placeholderTextColor="rgba(0, 0, 0, 0.5)"
           autoCapitalize="none"
           autoCorrect={false}
         />
         <Text style={styles.subheading} >Password</Text>
         <TextInput style={styles.input}
           placeholder="Password"
-          placeholderTextColor="rgba(0, 0, 0, 0.5)" 
+          placeholderTextColor="rgba(0, 0, 0, 0.5)"
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry={true}
@@ -36,6 +36,11 @@ const LoginScreen = () => {
         <TouchableOpacity style={styles.buttonContainer} >
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate("signin")} >
+          <Text style={styles.Googlebutton}>LOGIN USING YOUR GOOGLE ACCOUNT</Text>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -78,7 +83,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
 
-
   },
   input: {
     backgroundColor: 'white',
@@ -92,11 +96,13 @@ const styles = StyleSheet.create({
 
   },
   heading: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: "bold",
+    fontFamily: 'Poppin',
   },
   subheading: {
     fontSize: 20,
+    fontFamily: 'Poppin',
 
   },
   buttonBack: {
@@ -105,7 +111,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius:10,
+    borderRadius: 10,
   },
 
   backButtonContainer: {
@@ -115,6 +121,17 @@ const styles = StyleSheet.create({
     top: 20,
 
 
+
+  },
+  Googlebutton: {
+    backgroundColor: 'white',
+    textAlign: 'center',
+    fontWeight: "bold",
+    top: 50,
+    borderRadius: 10,
+    paddingHorizontal:10,
+    paddingBottom:10,
+    paddingTop:10,
 
   },
 

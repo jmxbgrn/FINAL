@@ -1,18 +1,25 @@
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './Navigation';
+import Tabs from './tabs';
 
+import { createStackNavigator } from "@react-navigation/stack";
 
- function App() {
+function App() {
   return (
-< Navigation/>
+    <Stack.Navigation>
+    <Stack.Screen name = 'tabs' components = {Tabs}/> 
+    </Stack.Navigation>
+
   );
 }
 
 export default () => {
-  return(
+  return (
     <NavigationContainer>
-    <App/>
+      <App />
     </NavigationContainer>
   )
 }
 
+
+const Stack = createStackNavigator();

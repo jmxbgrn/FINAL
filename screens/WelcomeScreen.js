@@ -16,6 +16,12 @@ const WelcomeScreen = () => {
                 <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("register")}>
                     <Text style={styles.buttonText}>REGISTER</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("dashboard")}>
+                    <Text style={styles.buttonText}>dashboard sample</Text>
+                </TouchableOpacity>
+
+
             </View>
         </View>
 

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const CameraScreen = () => {
+const PendingScreen = () => {
   return (
     <View>
       <Text>CameraScreen</Text>
@@ -9,6 +9,6 @@ const CameraScreen = () => {
   );
 };
 
-export default CameraScreen;
+export default PendingScreen;
 
 const styles = StyleSheet.create({});
