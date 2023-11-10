@@ -16,17 +16,19 @@ const WelcomeScreen = () => {
                 <TouchableOpacity style={styles.buttonContainer}onPress={() => navigation.navigate("road")} >
                     <Text style={styles.buttonText } >ROAD OBSTRUCTION</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonContainer} >
+                <TouchableOpacity style={styles.buttonContainer}onPress={() => navigation.navigate("stray")} >
                     <Text style={styles.buttonText}>STRAY ANIMAL</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonContainer} >
+                <TouchableOpacity style={styles.buttonContainer}onPress={() => navigation.navigate("waste")} >
                     <Text style={styles.buttonText}>WASTE MANAGEMENT</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonContainer} >
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("other")}>
                     <Text style={styles.buttonText}>OTHERS</Text>
                 </TouchableOpacity>
+
+                
 
 
             </View>

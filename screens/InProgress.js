@@ -4,7 +4,7 @@ import React from "react";
 const InprogressScreen = () => {
   return (
     <View>
-      <Text>InProgressScreen</Text>
+      <Text>InProgress</Text>
     </View>
   );
 };

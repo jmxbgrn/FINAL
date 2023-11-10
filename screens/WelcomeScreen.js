@@ -1,16 +1,26 @@
 import { StyleSheet, Text, View, TouchableOpacity, StatusBar, Image, } from "react-native";
 import React from "react";
 import { useNavigation } from '@react-navigation/native';
-import welcome from '../assets/images/WelcomeLogo.png'
+
+
 
 const WelcomeScreen = () => {
+
     const navigation = useNavigation()
     return (
         <View style={styles.container}>
-             
-        <TouchableOpacity onPress={() => navigation.navigate("login")} >
-            <Text>button</Text>
-            </TouchableOpacity>
+            <View style={styles.imageContainer}><Image style={styles.image} source={require ('../assets/images/WelcomeLogo.png')} /></View>
+            <View style={styles.formContainer}>
+
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("login")}>
+                    <Text style={styles.buttonText}>LOGIN</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("register")}>
+                    <Text style={styles.buttonText}>REGISTER</Text>
+                </TouchableOpacity>
+
+            </View>
+
         </View>
 
     );

@@ -4,7 +4,7 @@ import React from "react";
 const PendingScreen = () => {
   return (
     <View>
-      <Text>PendingScreen</Text>
+      <Text>Pending</Text>
     </View>
   );
 };

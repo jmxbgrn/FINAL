@@ -14,7 +14,7 @@ const RegisterScreen = () => {
           <AntDesign style={styles.icon} name="left" size={24} color="black" />
         </TouchableOpacity>
       </View>
-      <View style={styles.imageContainer}> <Image style={styles.image} source={welcome} /></View>
+      <View style={styles.imageContainer}><Image style={styles.image} source={welcome} /></View>
       <View style={styles.formContainer}>
         <Text style={styles.heading}>Registration</Text>
         
