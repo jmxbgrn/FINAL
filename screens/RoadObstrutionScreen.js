@@ -19,27 +19,6 @@ const RoadObstructionScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
-        <View style={styles.imageContainer}>
-        
-          <Image
-            style={styles.image}
-            source={require("../assets/images/roadobstruction2.jpg")}
-            
-          />
-        
-             <Text>"RoadObstruction"</Text>
-
-          <View style={styles.personIconContainer}>
-            <Ionicons
-              style={styles.personIcon}
-              name="person-circle-outline"
-              size={24}
-              color="black"
-            />
-            <Text style={styles.personicaontext}>50 mins ago.</Text>
-            <Text style={styles.personicaontext}>2nd St.</Text>
-          </View>
-        </View>
         <View style={styles.headerContainer}>
           <View style={styles.backButtonContainer}>
             <TouchableOpacity
@@ -56,6 +35,47 @@ const RoadObstructionScreen = () => {
           </View>
           <Text style={styles.header}>ROAD OBSTRUCTION</Text>
         </View>
+
+        {/* First Image Container */}
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={require("../assets/images/roadobstruction2.jpg")}
+          />
+          <Text style={styles.pertext}>"ROAD CLEARING"</Text>
+          <Text style={styles.perotext}>Completed</Text>
+          <View style={styles.personIconContainer}>
+            <Ionicons
+              style={styles.personIcon}
+              name="person-circle-outline"
+              size={24}
+              color="red"
+            />
+            <Text style={styles.personicaontext}>50 mins ago.</Text>
+            <Text style={styles.personicaontext}>2nd St.</Text>
+          </View>
+        </View>
+
+        {/* Second Image Container */}
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={require("../assets/deadanimal.jpg")}
+          />
+          <Text style={styles.pertext}>"DEAD ANIMAL"</Text>
+          <Text style={styles.perotext}>In Progress</Text>
+          <View style={styles.personIconContainer}>
+            <Ionicons
+              style={styles.personIcon}
+              name="person-circle-outline"
+              size={24}
+
+              color="red"
+            />
+            <Text style={styles.personicaontext}>1 hour ago.</Text>
+            <Text style={styles.personicaontext}>3rd St.</Text>
+          </View>
+        </View>
       </View>
     </ScrollView>
   );
@@ -71,6 +91,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#EADCC1",
   },
+  headerContainer: {
+    backgroundColor: "black",
+    paddingHorizontal: 120,
+    padding: 20,
+    fontWeight: "bold",
+  },
+  header: {
+    textAlign: "center",
+    color: "white",
+  },
   imageContainer: {
     backgroundColor: "white",
     paddingHorizontal: 15,
@@ -79,8 +109,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     paddingBottom: 30,
     paddingTop: 40,
-    position: "relative",
-    bottom: 100,
+    marginTop: 20, // Add spacing between image containers
   },
   image: {
     height: 200,
@@ -92,11 +121,26 @@ const styles = StyleSheet.create({
     left: 15,
   },
   personIcon: {},
+  pertext: {
+    fontWeight: 'bold',
+    marginTop: 10,
+    color: 'red',
+    fontSize: 12,
+  },
+  perotext: {
+    fontStyle: 'italic',
+    color: 'green',
+  },
+  personicaontext: {
+    bottom: 20,
+    left: 25,
+    fontSize: 10,
+  },
   backButtonContainer: {
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    backgroundColor: "white",
-    borderRadius: 10,
+    width: "100%",
+    position: "absolute",
+    left: 10,
+    top: 5,
   },
   buttonBack: {
     width: 50,
@@ -105,29 +149,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,
-  },
-  backButtonContainer: {
-    width: "100%",
-    position: "absolute",
-    left: 10,
-    top: 5,
-  },
-  personicaontext: {
-    bottom: 20,
-    left: 25,
-    fontSize: 10,
-    fontWeight: "bold",
-  },
-  headerContainer: {
-    backgroundColor: "black",
-    bottom: 470,
-    paddingHorizontal: 120,
-    padding: 20,
-    fontWeight: "bold",
-  },
-  header: {
-    textAlign: "center",
-    color: "white",
   },
 });
 

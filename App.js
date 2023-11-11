@@ -26,11 +26,11 @@ function App() {
 
 
       <Stack.Navigator>
-      {/* <Stack.Screen options={{ headerShown: false }} name="Tab" component={Tabs} /> */}
+      <Stack.Screen options={{ headerShown: false }} name="Tab" component={Tabs} />
       <Stack.Screen options={{ headerShown: false }} name="road" component={RoadObstructionScreen} />
-      {/* <Stack.Screen options={{ headerShown: false }} name="stray" component={StrayAnimal} />
+      <Stack.Screen options={{ headerShown: false }} name="stray" component={StrayAnimal} />
       <Stack.Screen options={{ headerShown: false }} name="waste" component={WasteManagement} />
-      <Stack.Screen options={{ headerShown: false }} name="other" component={OtherScreen} /> */}
+      <Stack.Screen options={{ headerShown: false }} name="other" component={OtherScreen} />
 
     </Stack.Navigator>
 
