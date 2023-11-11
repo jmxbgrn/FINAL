@@ -16,11 +16,11 @@ const Navigation = () => {
   return (
     <Stack.Navigator>
   
-      {/* <Stack.Screen options={{ headerShown: false }} name="dashboard" component={DashboardScreen} /> */}
+      <Stack.Screen options={{ headerShown: false }} name="dashboard" component={DashboardScreen} />
       <Stack.Screen options={{ headerShown: false }} name="road" component={RoadObstructionScreen} />
-      {/* <Stack.Screen options={{ headerShown: false }} name="stray" component={StrayAnimal} />
+      <Stack.Screen options={{ headerShown: false }} name="stray" component={StrayAnimal} />
       <Stack.Screen options={{ headerShown: false }} name="waste" component={WasteManagement} />
-      <Stack.Screen options={{ headerShown: false }} name="other" component={Other} /> */}
+      <Stack.Screen options={{ headerShown: false }} name="other" component={Other} />
 
     </Stack.Navigator>
   );

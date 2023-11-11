@@ -7,6 +7,7 @@ import {
   StatusBar,
   Image,
   TextInput,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
@@ -16,62 +17,59 @@ const RoadObstructionScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={require("../assets/images/Stray2.jpg")}
-        />
-        <View style={styles.personIconContainer}>
- 
-
-          <Ionicons
-            style={styles.personIcon}
-            name="person-circle-outline"
-            size={24}
-            color="black" 
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <View style={styles.container}>
+        <View style={styles.imageContainer}>
+        
+          <Image
+            style={styles.image}
+            source={require("../assets/images/roadobstruction2.jpg")}
+            
           />
-          <Text>ROAD OBSTRUCTION</Text>
+        
+             <Text>"RoadObstruction"</Text>
 
+          <View style={styles.personIconContainer}>
+            <Ionicons
+              style={styles.personIcon}
+              name="person-circle-outline"
+              size={24}
+              color="black"
+            />
+            <Text style={styles.personicaontext}>50 mins ago.</Text>
+            <Text style={styles.personicaontext}>2nd St.</Text>
+          </View>
+        </View>
+        <View style={styles.headerContainer}>
+          <View style={styles.backButtonContainer}>
+            <TouchableOpacity
+              style={styles.buttonBack}
+              onPress={() => navigation.navigate("Dashboard")}
+            >
+              <AntDesign
+                style={styles.icon}
+                name="left"
+                size={24}
+                color="black"
+              />
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.header}>ROAD OBSTRUCTION</Text>
         </View>
       </View>
-      <Text style={styles.header}>ROAD OBSTRUCTION</Text>
-      <View style={styles.backButtonContainer}>
-        <TouchableOpacity
-          style={styles.buttonBack}
-          onPress={() => navigation.navigate("Dashboard")}
-        >
-          <AntDesign
-            style={styles.icon}
-            name="left"
-            size={24}
-            color="black"
-          />
-        </TouchableOpacity>
-      </View>
-
-      
-    </View>
+    </ScrollView>
   );
 };
 
-export default RoadObstructionScreen;
-
 const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+  },
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#EADCC1",
-  },
-  header: {
-    backgroundColor: "black",
-    paddingVertical: 20,
-    textAlign: "center",
-    color: "white",
-    fontSize: 25,
-    bottom:470,
-    
   },
   imageContainer: {
     backgroundColor: "white",
@@ -81,8 +79,8 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     paddingBottom: 30,
     paddingTop: 40,
-    position: "relative", // Ensure child views are positioned relative to this container
-    bottom:70,
+    position: "relative",
+    bottom: 100,
   },
   image: {
     height: 200,
@@ -90,8 +88,8 @@ const styles = StyleSheet.create({
   },
   personIconContainer: {
     position: "absolute",
-    top: 5, // Adjust as needed
-    left: 15, // Adjust as needed
+    top: 5,
+    left: 15,
   },
   personIcon: {},
   backButtonContainer: {
@@ -107,12 +105,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,
-    
   },
-  backButtonContainer:{
+  backButtonContainer: {
     width: "100%",
     position: "absolute",
-    left: 20,
-    top: 20,
+    left: 10,
+    top: 5,
+  },
+  personicaontext: {
+    bottom: 20,
+    left: 25,
+    fontSize: 10,
+    fontWeight: "bold",
+  },
+  headerContainer: {
+    backgroundColor: "black",
+    bottom: 470,
+    paddingHorizontal: 120,
+    padding: 20,
+    fontWeight: "bold",
+  },
+  header: {
+    textAlign: "center",
+    color: "white",
   },
 });
+
+export default RoadObstructionScreen;
